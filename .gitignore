@@ -1,2 +1,5 @@
 fetchjson/package-lock.json
 fetchjson/node_modules/
+node_modules/
+.parcel-cache/
+maps/dist/

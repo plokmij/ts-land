@@ -1,26 +1,19 @@
-class Sorter {
-  constructor(public collection: number[] | string) {}
+import { NumbersCollection } from './NumbersCollection';
+import { CharactersCollection } from './CharactersCollection';
+import { LinkedList } from './LinkedList';
 
-  sort(): void {
-    const { length } = this.collection;
-    for (let i = 0; i < length; i++) {
-      for (let j = i + 1; j < length; j++) {
-        if (this.collection instanceof Array) {
-          if (this.collection[i] > this.collection[j]) {
-            this.collection[i] += this.collection[j];
-            this.collection[j] = this.collection[i] - this.collection[j];
-            this.collection[i] = this.collection[i] - this.collection[j];
-          }
-        }
+const collection = new NumbersCollection([10,-3,-3,0,5]);
+collection.sort();
+console.log(collection);
 
-        if (typeof this.collection === 'string') {
-          
-        }
-      }
-    }
-  }
-}
+const ll = new LinkedList();
+ll.add(10);
+ll.add(-3);
+ll.add(20);
+ll.add(15);
+ll.sort();
+ll.print();
 
-const sorter = new Sorter([10, 3, -5, 0]);
-sorter.sort();
-console.log(sorter.collection);
+const charsCollection = new CharactersCollection('samFan');
+charsCollection.sort();
+console.log(charsCollection.data);

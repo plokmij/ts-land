@@ -1,25 +1,18 @@
 "use strict";
-class Sorter {
-    constructor(collection) {
-        this.collection = collection;
-    }
-    sort() {
-        const { length } = this.collection;
-        for (let i = 0; i < length; i++) {
-            for (let j = i + 1; j < length; j++) {
-                if (this.collection instanceof Array) {
-                    if (this.collection[i] > this.collection[j]) {
-                        this.collection[i] += this.collection[j];
-                        this.collection[j] = this.collection[i] - this.collection[j];
-                        this.collection[i] = this.collection[i] - this.collection[j];
-                    }
-                }
-                if (typeof this.collection === 'string') {
-                }
-            }
-        }
-    }
-}
-const sorter = new Sorter([10, 3, -5, 0]);
-sorter.sort();
-console.log(sorter.collection);
+Object.defineProperty(exports, "__esModule", { value: true });
+const NumbersCollection_1 = require("./NumbersCollection");
+const CharactersCollection_1 = require("./CharactersCollection");
+const LinkedList_1 = require("./LinkedList");
+const collection = new NumbersCollection_1.NumbersCollection([10, -3, -3, 0, 5]);
+collection.sort();
+console.log(collection);
+const ll = new LinkedList_1.LinkedList();
+ll.add(10);
+ll.add(-3);
+ll.add(20);
+ll.add(15);
+ll.sort();
+ll.print();
+const charsCollection = new CharactersCollection_1.CharactersCollection('samFan');
+charsCollection.sort();
+console.log(charsCollection.data);

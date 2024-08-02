@@ -1,4 +1,4 @@
-function print<T>(input: T): void {
+function print<T extends string>(input: T): void {
   console.log(input);
 }
 

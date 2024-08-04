@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "samfan",
+      "age": 32,
+      "id": 1
+    },
+    {
+      "name": "grizi",
+      "age": 32,
+      "id": 2
+    },
+    {
+      "name": "grizi",
+      "age": 32,
+      "id": 3
+    }
+  ]
+}
